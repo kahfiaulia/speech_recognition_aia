@@ -1,0 +1,31 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="component_event" id="KrsochomM#Cv4NB#fU8P" x="-340" y="-163">
+    <mutation component_type="Button" is_generic="false" instance_name="Rekam" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">Rekam</field>
+    <statement name="DO">
+      <block type="component_method" id="#b]({9)5eC|j9D7r1s3`">
+        <mutation component_type="SpeechRecognizer" method_name="GetText" is_generic="false" instance_name="SpeechRecognizer1"></mutation>
+        <field name="COMPONENT_SELECTOR">SpeechRecognizer1</field>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="@;4a}`=(Sni9V}@/r=O." x="-351" y="-64">
+    <mutation component_type="SpeechRecognizer" is_generic="false" instance_name="SpeechRecognizer1" event_name="AfterGettingText"></mutation>
+    <field name="COMPONENT_SELECTOR">SpeechRecognizer1</field>
+    <statement name="DO">
+      <block type="component_set_get" id=";E=6tyM[.O-Zh^uAlJL*">
+        <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Hasil"></mutation>
+        <field name="COMPONENT_SELECTOR">Hasil</field>
+        <field name="PROP">Text</field>
+        <value name="VALUE">
+          <block type="component_set_get" id="xLKJZHbBUnrHJYf[?[Sf">
+            <mutation component_type="SpeechRecognizer" set_or_get="get" property_name="Result" is_generic="false" instance_name="SpeechRecognizer1"></mutation>
+            <field name="COMPONENT_SELECTOR">SpeechRecognizer1</field>
+            <field name="PROP">Result</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <yacodeblocks ya-version="208" language-version="33"></yacodeblocks>
+</xml>
